@@ -1,5 +1,9 @@
 """
- homework_2.7.py -- etl library
+ ETL library
+
+ This was an assignment for an Advanced Python
+ Programming Course with instructor David Blaikie
+ (dbb212@nyu.edu) taken at NYU's SPS
 
  Author: Amanda Li (al3258@nyu.edu)
  Last Revised: 9/24/2023
