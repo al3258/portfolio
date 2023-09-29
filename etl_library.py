@@ -42,14 +42,6 @@ def sql2csv(query, conn):
 
     return writestr
 
-# q = 'SELECT * FROM revenue'
-# c = '../session_2.db'
-# f = '../revenue_from_db.csv'
-#
-# ws = sql2csv(q, c)
-#
-# with open(f, 'w', newline='') as writefile:
-#     writefile.write(ws)
 
 def sql2json(query, conn, format='lod', primary_key=None):
     """
@@ -129,17 +121,6 @@ def sql2json(query, conn, format='lod', primary_key=None):
         return json.dumps(lod, indent=4)
 
 
-# q = 'SELECT * FROM revenue'
-# c = '../session_2.db'
-# f = '../revenue_from_db.csv'
-# form = 'dod'
-# pk = 'company'
-#
-# json_str = sql2json(q, c, format=form, primary_key=pk)
-# writefile = open(f'../revenue_{form}.json', 'w', newline='')
-# writefile.write(json_str)
-# writefile.close()
-
 def query_create(header_row, row, table):
     """
     Write a CREATE TABLE and INSERT INTO statements
@@ -211,11 +192,6 @@ def csv2sql(filename, conn, table):
     conn.commit()
     conn.close()
 
-# fn = '../revenue.csv'
-# c = '../session_2.db'
-# t = 'revenue'
-#
-# csv2sql(fn, c, t)
 
 def json2sql(filename, conn, table):
     """
@@ -246,9 +222,3 @@ def json2sql(filename, conn, table):
 
     conn.commit()
     conn.close()
-
-# fn = '../weather_newyork_dod.json'
-# c = '../session_2.db'
-# t = 'weather_newyork'
-#
-# json2sql(fn, c, t)
